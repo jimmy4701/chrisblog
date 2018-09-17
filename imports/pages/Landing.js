@@ -9,6 +9,8 @@ export default class Landing extends Component {
     }
 
     birthday = () => this.setState({age: this.state.age + 1})
+
+    changeTitle = (e) => this.setState({title: e.target.value})
     
     render(){
         const { title, description, age } = this.state
@@ -20,6 +22,9 @@ export default class Landing extends Component {
                 <p>{description}</p>
                 <p>Chris est un jeune développeur de {age} ans</p>
                 <button onClick={this.birthday}>Joyeux anniversaire !</button>
+                <form>
+                    <input type="text" value={title} onChange={this.changeTitle} />
+                </form>
             </div>
         )
     }
