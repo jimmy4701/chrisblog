@@ -1,12 +1,13 @@
 import { Meteor } from 'meteor/meteor'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Landing from '/imports/pages/Landing'
 
 
 Meteor.startup(() => {
     console.log('CLIENT: LAUNCH')
     ReactDOM.render(
-        <h1>EOZIFO ZE</h1>,
+        <Landing />,
         document.getElementById('root')
     )
 })

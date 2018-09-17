@@ -3,10 +3,13 @@ import React, { Component } from 'react'
 export default class Landing extends Component {
 
     state = {
-
+        title: "Chris Blob",
+        description: "Le blog de Chris"
     }
 
     render(){
-        return <p>SALUT !</p>
+        const { title, description } = this.state
+        
+        return <p>{title} {description}</p>
     }
 }
