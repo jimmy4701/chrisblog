@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from '/imports/components/Navbar'
+import { Button, Icon } from 'semantic-ui-react'
 
 export default class Landing extends Component {
     
@@ -29,7 +30,9 @@ export default class Landing extends Component {
                 <h1 style={{color: color}}>{title}</h1>
                 <p>{description}</p>
                 <p>Chris est un jeune développeur de {age} ans</p>
-                <button onClick={this.birthday}>Joyeux anniversaire !</button>
+                <Button primary onClick={this.birthday}>
+                    <Icon name="user"/> Joyeux anniversaire !
+                </Button>
                 <form>
                     <input type="text" name="title" value={title} onChange={this.handleChange} />
                     <input type="text" name="description" value={description} onChange={this.handleChange} />
