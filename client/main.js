@@ -7,7 +7,8 @@ import Landing from '/imports/pages/Landing'
 Meteor.startup(() => {
     console.log('CLIENT: LAUNCH')
     ReactDOM.render(
-        <Landing />,
+        <Landing color="blue"/>,
         document.getElementById('root')
     )
 })
+
