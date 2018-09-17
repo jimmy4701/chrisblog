@@ -1,15 +1,25 @@
 import React, { Component } from 'react'
 
 export default class Landing extends Component {
-
+    
     state = {
         title: "Chris Blob",
-        description: "Le blog de Chris"
+        description: "Le blog de Chris",
+        age: 27
     }
 
+    birthday = () => this.setState({age: this.state.age + 1})
+    
     render(){
-        const { title, description } = this.state
+        const { title, description, age } = this.state
         
-        return <p>{title} {description}</p>
+        return(
+            <div>
+                <h1>{title}</h1>
+                <p>{description}</p>
+                <p>Chris est un jeune développeur de {age} ans</p>
+                <button onClick={this.birthday}>Joyeux anniversaire !</button>
+            </div>
+        )
     }
 }
